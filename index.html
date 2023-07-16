@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Butcherman&family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600;700&family=Lora:wght@500;600&family=Nunito:wght@200;300;400;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Pokédex</title>
+  </head>
+  <body>
+    <main class="pokedex" tabindex="0">
+      <section class="pokedex-main">
+        <div class="header-shadow">
+          <div class="header">
+            <p class="light is-big" id="light"></p>
+            <p class="light is-red"></p>
+            <p class="light is-yellow"></p>
+            <p class="light is-green"></p>
+          </div>
+        </div>
+        <div class="screen">
+          <div class="screen-border">
+            <div class="screen-safeArea" id="screen">
+              <img src="" alt="" id="image" />
+            </div>
+            <div class="screen-button">
+              <span class="button"></span>
+              <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="variants">
+            <span class="buttonBig" id="btnRandom"></span>
+            <span class="buttonSmall"></span>
+          </div>
+          <form role="search" id="form" class="search">
+            <input
+              type="text"
+              name="id"
+              placeholder="¿Quién es ese pokémon?"
+              autocomplete="off"
+              id="demo"
+            />
+          </form>
+          <div class="description">
+            <p id="description">
+              Busca un pokémon para conocer todos sus caracteristicas
+            </p>
+          </div>
+          <div class="navigation">
+            <button
+              id="next-pokemon"
+              class="navigation-right"
+              aria-label="Siguiente pókemon"
+            ></button>
+            <button
+              id="prev-pokemon"
+              class="navigation-left"
+              aria-label="Pokemon Anterior"
+            ></button>
+            <button
+              id="next-image"
+              class="navigation-down"
+              aria-label="Siguiente imagen del pókemon"
+            ></button>
+            <button
+              id="prev-image"
+              class="navigation-up"
+              aria-label="Imagen anterior del pókemon"
+            ></button>
+          </div>
+        </div>
+      </section>
+      <div class="cover-front">front</div>
+      <section class="cover-back">
+        <div class="stats">
+          <canvas id="stats" width="200" height="200"></canvas>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

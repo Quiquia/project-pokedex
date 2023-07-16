@@ -1,0 +1,87 @@
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 7rem;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "variants variants" "search navigation" "description navigation";
+  gap: 1rem;
+}
+
+.variants {
+  grid-area: variants;
+  display: flex;
+  align-items: center;
+}
+
+.variants > *:active {
+  transform: scale(0.9);
+}
+
+.buttonBig {
+  margin: 0;
+  inline-size: 3.25rem;
+  block-size: 3.25rem;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  margin-right: 5.36rem;
+  filter: drop-shadow(3px 2px 0 var(--black));
+  cursor: pointer;
+}
+
+.buttonSmall {
+  margin: 0;
+  inline-size: 2rem;
+  block-size: 0.5rem;
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+  position: relative;
+  border: none;
+  padding: 0;
+  box-shadow: 1px 2px 0 var(--black);
+  cursor: pointer;
+}
+
+.buttonSmall::after {
+  content: "";
+  inline-size: 2rem;
+  block-size: 0.5rem;
+  background-color: var(--yellow);
+  border-radius: 0.5rem;
+  position: absolute;
+  right: 3.5rem;
+  box-shadow: 1px 2px 0 #d2ab33;
+}
+
+.search {
+  grid-area: search;
+  color: rgba(0, 0, 0, 0.64);
+  display: flex;
+}
+
+.search input {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  font: var(--body1);
+  flex-grow: 1;
+  outline: none;
+}
+
+.search input:focus {
+  box-shadow: inset 0 0 0 1px var(--secondary);
+}
+
+.description {
+  grid-area: description;
+  border: 1px solid var(--black);
+  border-radius: 0.5rem;
+  background-color: #51ae5f;
+  font: var(--body2-regular);
+  color: var(--black);
+  padding: 0.5rem;
+  block-size: 7rem;
+  overflow: auto;
+}
+
+.description p {
+  margin: 0;
+}
