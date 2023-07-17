@@ -17,7 +17,7 @@ export function createChart(stats) {
           data: stats,
           borderWidth: 1,
           color: "#fff",
-          backgroundColor: "#fff",
+          backgroundColor: "rgba(255,255,255,0.5)",
         },
       ],
     },
